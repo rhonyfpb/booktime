@@ -7,11 +7,32 @@
 				<input id="locale" type="text" />
 			</div>
 			<div class="control">
-				<label for="hStart">Horario</label>
-				<select id="hStart">
-					<option value="18:00:00">6:00 pm</option>
-					<option value="19:00:00">7:00 pm</option>
+				<div class="name">
+					<span class="label-name">Horarios</span>
+					<label for="hStart">Llegada</label>
+					<select id="hStart">
+						<option value="18:00:00">6:00 pm</option>
+						<option value="19:00:00">7:00 pm</option>
+					</select>
+					<label for="hEnd">Salida</label>
+					<select id="hEnd">
+						<option value="19:00:00">7:00 pm</option>
+						<option value="20:00:00">8:00 pm</option>
+					</select>
+				</div>
+			</div>
+			<div class="control">
+				<label for="stars">Estrellas</label>
+				<select id="stars">
+					<option value="1">1 Estrella</option>
+					<option value="2">2 Estrellas</option>
+					<option value="3">3 Estrellas</option>
+					<option value="4">4 Estrellas</option>
+					<option value="5">5 Estrellas</option>
 				</select>
+			</div>
+			<div class="control">
+				<button type="button">Buscar</button>
 			</div>
 		</div>
 	</fieldset>
