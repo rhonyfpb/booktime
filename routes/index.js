@@ -3,7 +3,8 @@ var router = express.Router();
 
 var search = require("./search.js");
 
-// index
+// search
 router.get("/", search.getAllHotels);
+router.get("/getLocales", search.getAllLocales);
 
 module.exports = router;
