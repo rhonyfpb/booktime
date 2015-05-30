@@ -1,0 +1,32 @@
+{
+  "name": "booktime",
+  "version": "0.1.0",
+  "description": "Reservas hoteleras por rangos horarios",
+  "main": "server.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhonyfpb/booktime.git"
+  },
+  "keywords": [
+    "hotel",
+    "reservas",
+    "rangos",
+    "horarios"
+  ],
+  "author": "Rhony Pedraza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhonyfpb/booktime/issues"
+  },
+  "homepage": "https://github.com/rhonyfpb/booktime",
+  "dependencies": {
+    "body-parser": "1.12.x",
+    "express": "4.12.x",
+    "express-handlebars": "2.0.x",
+    "morgan": "1.5.x"
+  }
+}
