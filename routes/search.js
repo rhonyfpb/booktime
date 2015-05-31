@@ -12,25 +12,29 @@ var search = {
 	},
 
 	getHotels: function(req, res) {
+		var result = [];
 		console.log("req.body", req.body);
 		var hotelMocks = TAFFY(hMocks);
-		var result = hotelMocks({ locale: req.body.locale });
-		//console.log("result", result.count());
-		result.each(function(item) {
+		
+		var query = { locale: req.body.locale, start: { gte: req.body.hStart }, end: { gte: req.body.hEnd } };
+		req.body.stars ? (query.stars = parseInt(req.body.stars)) : "";
+
+		var data = hotelMocks(query);
+		data.each(function(item) {
 			console.log("item", item);
+			result.push(item);
 		});
+		
 		// interfaz
-		res.render("search");
+		res.render("search", result);
 	}
 };
 
 var hMocks = [{
 	name: "Hotel Bogotá 1",
 	price: 35000,
-	range: {
-		start: "01",
-		end: "13"
-	},
+	start: "01",
+	end: "13",
 	stars: 3,
 	address: "Calle falsa # 123",
 	locale: "Bogotá",
@@ -38,10 +42,8 @@ var hMocks = [{
 }, {
 	name: "Hotel Chía 2",
 	price: 38000,
-	range: {
-		start: "03",
-		end: "11"
-	},
+	start: "03",
+	end: "11",
 	stars: 4,
 	address: "Carrera 2 con 3",
 	locale: "Chía",
@@ -49,10 +51,8 @@ var hMocks = [{
 }, {
 	name: "Hotel Bogotá 3",
 	price: 45000,
-	range: {
-		start: "02",
-		end: "12"
-	},
+	start: "02",
+	end: "12",
 	stars: 5,
 	address: "Carrera 11 con 2",
 	locale: "Bogotá",
@@ -60,10 +60,8 @@ var hMocks = [{
 }, {
 	name: "Hotel Medellín 4",
 	price: 39000,
-	range: {
-		start: "01",
-		end: "12"
-	},
+	start: "01",
+	end: "12",
 	stars: 4,
 	address: "Calle 3 con 22",
 	locale: "Medellín",
