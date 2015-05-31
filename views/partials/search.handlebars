@@ -1,51 +1,53 @@
 <div id="search-engine">
 	<fieldset>
 		<legend>Encuentra tu hotel</legend>
-		<div class="fields">
-			<div class="control">
-				<label for="locale">Ubicaci&oacute;n/Destino</label>
-				<input id="locale" type="text" />
-			</div>
-			<div class="control">
-				<div class="name">
-					<span class="label-name">Horarios</span>
-					<label for="hStart">Llegada</label>
-					<select id="hStart">
-						<option value="18:00:00">6:00 pm</option>
-						<option value="19:00:00">7:00 pm</option>
-						<option value="20:00:00">8:00 pm</option>
-						<option value="21:00:00">9:00 pm</option>
-						<option value="22:00:00">10:00 pm</option>
-						<option value="23:00:00">11:00 pm</option>
-						<option value="00:00:00">12:00 am</option>
-						<option value="01:00:00">1:00 am</option>
-					</select>
-					<label for="hEnd">Salida</label>
-					<select id="hEnd">
-						<option value="19:00:00">7:00 pm</option>
-						<option value="20:00:00">8:00 pm</option>
-						<option value="21:00:00">9:00 pm</option>
-						<option value="22:00:00">10:00 pm</option>
-						<option value="23:00:00">11:00 pm</option>
-						<option value="00:00:00">12:00 am</option>
-						<option value="01:00:00">1:00 am</option>
-						<option value="02:00:00">2:00 am</option>
+		<form method="POST" action="/search">
+			<div class="fields">
+				<div class="control">
+					<label for="locale">Ubicaci&oacute;n/Destino</label>
+					<input id="locale" name="locale" type="text" />
+				</div>
+				<div class="control">
+					<div class="name">
+						<span class="label-name">Horarios</span>
+						<label for="hStart">Llegada</label>
+						<select id="hStart" name="hStart">
+							<option value="01">6:00 pm</option>
+							<option value="02">7:00 pm</option>
+							<option value="03">8:00 pm</option>
+							<option value="04">9:00 pm</option>
+							<option value="05">10:00 pm</option>
+							<option value="06">11:00 pm</option>
+							<option value="07">12:00 am</option>
+							<option value="08">1:00 am</option>
+						</select>
+						<label for="hEnd">Salida</label>
+						<select id="hEnd" name="hEnd">
+							<option value="02">7:00 pm</option>
+							<option value="03">8:00 pm</option>
+							<option value="04">9:00 pm</option>
+							<option value="05">10:00 pm</option>
+							<option value="06">11:00 pm</option>
+							<option value="07">12:00 am</option>
+							<option value="08">1:00 am</option>
+							<option value="09">2:00 am</option>
+						</select>
+					</div>
+				</div>
+				<div class="control">
+					<label for="stars">Estrellas</label>
+					<select id="stars" name="stars">
+						<option value="1">1 Estrella</option>
+						<option value="2">2 Estrellas</option>
+						<option value="3" selected>3 Estrellas</option>
+						<option value="4">4 Estrellas</option>
+						<option value="5">5 Estrellas</option>
 					</select>
 				</div>
+				<div class="control">
+					<button id="search" name="search" type="button">Buscar</button>
+				</div>
 			</div>
-			<div class="control">
-				<label for="stars">Estrellas</label>
-				<select id="stars">
-					<option value="1">1 Estrella</option>
-					<option value="2">2 Estrellas</option>
-					<option value="3" selected>3 Estrellas</option>
-					<option value="4">4 Estrellas</option>
-					<option value="5">5 Estrellas</option>
-				</select>
-			</div>
-			<div class="control">
-				<button id="search" type="button">Buscar</button>
-			</div>
-		</div>
+		</form>
 	</fieldset>
 </div>

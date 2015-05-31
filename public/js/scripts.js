@@ -5,6 +5,7 @@ $(function() {
 	var locale = $("#locale"); // cuadro de busqueda
 	var hStart = $("#hStart"); // hora de llegada
 	var hEnd = $("#hEnd"); // hora de salida
+	var stars = $("#stars"); // estrellas
 	var search = $("#search"); // boton de busqueda
 
 	// handlers
@@ -35,8 +36,25 @@ $(function() {
 	});
 
 	search.length && search.click(function() {
-		//
+		var loc = locale.val();
+		var hourStart = hStart.val();
+		var hourEnd = hEnd.val();
+		var starsVal = stars.val();
+		if(loc) {
+			search.closest("form").submit();
+		} else {
+			// no se ha definido criterio de busqueda
+		}
 	});
 
 	//
 });
+
+
+
+
+
+
+
+
+
