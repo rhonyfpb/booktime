@@ -84,4 +84,4 @@ var hLocale = [{
 	value: "Medellín"
 }];
 
-module.exports = search;s
+module.exports = search;
